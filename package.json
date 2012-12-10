@@ -1,5 +1,5 @@
 {
-  "name": "express-easycdn",
+  "name": "express-easyCDN",
   "version": "1.0.0",
   "description": "A Node.js module for Express that makes using a CDN for your static assets a breeze.",
   "main": "express-easycdn.js",
