@@ -1,8 +1,8 @@
 {
-  "name": "express-easyCDN",
+  "name": "express-simpleCDN",
   "version": "1.0.0",
   "description": "A Node.js module for Express that makes using a CDN for your static assets a breeze.",
-  "main": "express-easycdn.js",
+  "main": "express-simplecdn.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
   },
   "repository": {
       "type": "git",
-      "url" : "https://github.com/jamiesteven/express-easyCDN.git"
+      "url" : "https://github.com/jamiesteven/express-simpleCDN.git"
   },
   "keywords": [
     "express",

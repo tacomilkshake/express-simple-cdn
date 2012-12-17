@@ -1,4 +1,4 @@
-// express-easyCDN
+// express-simpleCDN
 // Copyright (c) 2012 Jamie Steven, jamiesteven on github.
 // Licensed under MIT
 

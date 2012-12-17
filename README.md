@@ -1,9 +1,51 @@
-express-easyCDN
+express-simpleCDN
 ===============
 
-A Node.js module for Express.js that makes using a CDN for your static assets a breeze.
+A Node.js module for Express.js that makes using a CDN for your static assets a breeze. Supports multiple CDN hosts to distribute your static assets amongst multiple CDN hosts.
 
-License 
+Installation
+------------
+
+    $ npm install express-simplecdn
+
+Usage
+-----
+
+These examples also assumes you're using Jade. Simply add any of following to your Express app.configure. You may also set different CDN host options in your production vs. development environments using specific configurations for each environment.
+
+This configuration will always use the one specified CDN host:
+    
+    app.locals.CDN = function(path) { return CDN(path, '//mycdn.com') };
+    // In Jade, script(src=CDN('/js/myscript.js')) will become script(src='//mycdn.com/js/myscript.js')
+
+This configuration will CRC hash your URLs to one of several CDN hosts in an array:
+    
+    app.locals.CDN = function(path) { return CDN(path, ['//cdn1.mycdn.com', '//cdn2.mycdn.com', '//cdn3.mycdn.com']) };
+    // In Jade, script(src=CDN('/js/myscript.js')) will become script(src='//cdnX.mycdn.com/js/myscript.js'), where X is a consistent bucket number.
+    
+This configuration will not rewrite your URLs (useful for development environments):
+    
+    app.locals.CDN = function(path) { return CDN(path) };
+    // In Jade, script(src=CDN('/js/myscript.js')) will become script(src='/js/myscript.js')
+    
+For any of the examples above, here's how to use the CDN function in your Jade template:
+
+    // JavaScript
+    script(src=CDN('/js/myscript.js'))
+    
+    // CSS
+    link(href=CDN('/css/mycss.css'), rel='stylesheet')
+    
+    // Images
+    img(src=CDN('/img/myimage.png'))
+    
+To Do
+-----
+
+* Add support for HTTPS specific CDN hosts.
+* Improve documentation in README.
+
+License
 -------
 
 Copyright (c) 2012 Jamie Steven, jamiesteven on github.
