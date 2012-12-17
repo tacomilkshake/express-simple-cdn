@@ -3,6 +3,8 @@ express-simple-cdn
 
 A Node.js module for Express.js that makes using a CDN for your static assets a breeze. Supports multiple CDN hosts to distribute your static assets amongst multiple hosts.
 
+[View this project on npmjs.org](https://npmjs.org/package/express-simple-cdn)
+
 Installation
 ------------
 
