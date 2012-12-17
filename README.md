@@ -1,17 +1,23 @@
-express-simpleCDN
-===============
+express-simple-cdn
+==================
 
 A Node.js module for Express.js that makes using a CDN for your static assets a breeze. Supports multiple CDN hosts to distribute your static assets amongst multiple hosts.
 
 Installation
 ------------
 
-    $ npm install express-simplecdn
+    $ npm install express-simple-cdn
 
 Usage
 -----
 
 These examples assumes you're also using Jade. Simply add any of following to your Express app.configure. You may also set different CDN host options in your production vs. development environments using specific configurations for each environment.
+
+Call the module like so:
+
+    var CDN = require('./modules/express-easyCDN');
+    
+And then add a template variable assignment with your CDN host options:
 
 This configuration will always use the one specified CDN host:
     
