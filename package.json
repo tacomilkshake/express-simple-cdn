@@ -6,15 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+      "crc": "*"
+  },
   "repository": {
       "type": "git",
-      "url" : "https://github.com/jamiesteven/express-easycdn.git"
+      "url" : "https://github.com/jamiesteven/express-easyCDN.git"
   },
   "keywords": [
     "express",
     "express-js",
     "CDN",
     "content distrubition network",
+    "crc",
+    "crc32",
     "cloudfront",
     "cloudflare",
     "maxcdn"
