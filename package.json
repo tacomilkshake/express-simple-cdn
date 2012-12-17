@@ -11,7 +11,7 @@
   },
   "repository": {
       "type": "git",
-      "url" : "https://github.com/jamiesteven/express-simpleCDN.git"
+      "url" : "https://github.com/jamiesteven/express-simple-cdn.git"
   },
   "keywords": [
     "express",
