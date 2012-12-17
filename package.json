@@ -2,7 +2,7 @@
   "name": "express-simple-cdn",
   "version": "1.0.0",
   "description": "A Node.js module for Express that makes using a CDN for your static assets a breeze.",
-  "main": "express-simplecdn.js",
+  "main": "express-simple-cdn.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
