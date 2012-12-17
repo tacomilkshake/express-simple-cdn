@@ -15,7 +15,7 @@ These examples assumes you're also using Jade. Simply add any of following to yo
 
 Call the module like so:
 
-    var CDN = require('./modules/express-easyCDN');
+    var CDN = require('express-simple-cdn');
     
 And then add a template variable assignment with your CDN host options:
 
