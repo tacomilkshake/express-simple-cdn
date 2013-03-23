@@ -32,6 +32,7 @@ This configuration will CRC hash your URLs to one of several CDN hosts in an arr
     // In Jade, script(src=CDN('/js/myscript.js')) will become script(src='//cdnX.mycdn.com/js/myscript.js'), where X is a consistent bucket number.
     
 This configuration will output a file version number in the URL for making sure that the CDN networks pull the newest versions of your files after pushing updates when the useFileVersion is passed as true.
+
 	server.locals.CDN = function (path, useFileVersion) {
 
         if(useFileVersion === undefined || useFileVersion == false)
