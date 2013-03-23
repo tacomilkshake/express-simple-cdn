@@ -10,9 +10,15 @@ getBucket = function(string, numbuckets) {
     return bucket;
 };
 
-var CDN = function(path, cdn) {
+var CDN = function(path, cdn, fileVersion) {
     var d = new Date();
     if (cdn) {
+
+        if(fileVersion !== undefined)
+        {
+            path = '/' + fileVersion + path;
+        }
+
         if (cdn instanceof Array) {
             return cdn[getBucket(path, cdn.length)] + path;
         } else {
