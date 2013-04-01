@@ -31,6 +31,31 @@ This configuration will CRC hash your URLs to one of several CDN hosts in an arr
     app.locals.CDN = function(path) { return CDN(path, ['//cdn1.mycdn.com', '//cdn2.mycdn.com', '//cdn3.mycdn.com']) };
     // In Jade, script(src=CDN('/js/myscript.js')) will become script(src='//cdnX.mycdn.com/js/myscript.js'), where X is a consistent bucket number.
     
+This configuration will output a file version number in the URL for making sure that the CDN networks pull the newest versions of your files after pushing updates when the useFileVersion is passed as true.
+
+	server.locals.CDN = function (path, useFileVersion) {
+
+        if(useFileVersion === undefined || useFileVersion == false)
+            return CDN(path, config.CDNURL);
+        else
+            return CDN(path, config.CDNURL, config.CDNVersion);
+    };
+
+To simplify using dynamic versioning it is suggested you add a route to reroute your versioned requests to your static resources folder.
+
+	server.get('/' + config.CDNVersion + '/*', function(req, res) {
+
+        var url = 'static' + req.url.replace('/' + config.CDNVersion,'');
+
+        fs.exists(url,function(exists) {
+            if(exists)
+                res.sendfile(url);
+            else
+                res.redirect('/404');
+        });
+
+    });
+    
 This configuration will not rewrite your URLs (useful for development environments):
     
     app.locals.CDN = function(path) { return CDN(path) };

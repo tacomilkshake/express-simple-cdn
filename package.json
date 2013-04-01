@@ -1,6 +1,6 @@
 {
   "name": "express-simple-cdn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node.js module for Express that makes using a CDN for your static assets a breeze.",
   "main": "express-simple-cdn.js",
   "scripts": {
