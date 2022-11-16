@@ -1,3 +1,5 @@
+### Project is no longer maintained.
+
 express-simple-cdn
 ==================
 
